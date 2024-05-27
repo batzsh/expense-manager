@@ -1,11 +1,11 @@
+import { env } from "./env";
 import fastify from "fastify";
-import { knex } from "./database";
 
 const app = fastify();
 
 app
   .listen({
-    port: 3333,
+    port: env.PORT
   })
   .then(() => {
     console.log("HTTP server is running...");
